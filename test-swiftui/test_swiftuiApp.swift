@@ -1,17 +1,25 @@
 //
-//  test_swiftuiApp.swift
-//  test-swiftui
+//  FocusFuelApp.swift
+//  FocusFuel
 //
-//  Created by Vitalii Navrotskyi on 13.03.2026.
+//  Created by Vitalii
 //
 
 import SwiftUI
 
 @main
-struct test_swiftuiApp: App {
+struct FocusFuelApp: App {
+    @StateObject private var appViewModel = AppViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if appViewModel.hasCompletedOnboarding {
+                HomeView()
+                    .environmentObject(appViewModel)
+            } else {
+                OnboardingView()
+                    .environmentObject(appViewModel)
+            }
         }
     }
 }
