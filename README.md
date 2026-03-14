@@ -32,6 +32,14 @@ The app follows MVVM (Model-View-ViewModel) architecture with clean separation o
 - Session history with lightweight insights
 - Settings for customization
 
+## Screenshots
+
+![Main](docs/main.png)
+![Focus Modes](docs/modes.png)
+![Session Detail](docs/detail.png)
+![History](docs/history.png)
+![Settings](docs/settings.png)
+
 ## Tech Stack
 
 - Swift 5.9+
@@ -49,3 +57,7 @@ This represents a realistic junior+/middle-level iOS developer effort for a poli
 ## AI Tool Used
 
 - OpenAI Codex (GPT-5)
+
+## Краткое описание
+
+FocusFuel — iOS‑приложение для планирования фокус‑сессий, отслеживания энергии и короткой рефлексии после работы. В процессе использовался AI‑инструмент OpenAI Codex (GPT‑5) для ускорения разработки и проверки кода. На выполнение задания ушло примерно 1–2 дня с учетом проектирования, реализации и полировки интерфейса. Приложение полностью работает офлайн и использует локальное хранение данных.
