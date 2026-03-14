@@ -26,9 +26,10 @@ The app follows MVVM (Model-View-ViewModel) architecture with clean separation o
 - Onboarding flow introducing the app
 - Dashboard with energy tracking and recommendations
 - Multiple focus modes (Deep Work, Learning, etc.)
+- Create and save custom focus modes
 - Active session timer with progress visualization
 - Post-session reflection with focus and energy ratings
-- Session history with insights
+- Session history with lightweight insights
 - Settings for customization
 
 ## Tech Stack
@@ -41,12 +42,7 @@ The app follows MVVM (Model-View-ViewModel) architecture with clean separation o
 
 ## Estimated Development Time
 
-- Planning and architecture: 2 hours
-- Models and services: 1.5 hours
-- ViewModels: 2 hours
-- Views and components: 4 hours
-- Testing and polishing: 1.5 hours
-- Total: ~11 hours
+- Total: ~6 hours
 
 This represents a realistic junior+/middle-level iOS developer effort for a polished, feature-complete app.
 
