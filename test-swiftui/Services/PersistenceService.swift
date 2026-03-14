@@ -8,6 +8,7 @@ import Foundation
 class PersistenceService {
     private let settingsKey = "userSettings"
     private let sessionsKey = "focusSessions"
+    private let customModesKey = "customFocusModes"
     
     func loadSettings() -> UserSettings {
         if let data = UserDefaults.standard.data(forKey: settingsKey),
@@ -40,5 +41,20 @@ class PersistenceService {
     func clearAllData() {
         UserDefaults.standard.removeObject(forKey: settingsKey)
         UserDefaults.standard.removeObject(forKey: sessionsKey)
+        UserDefaults.standard.removeObject(forKey: customModesKey)
+    }
+
+    func loadCustomModes() -> [FocusMode] {
+        if let data = UserDefaults.standard.data(forKey: customModesKey),
+           let modes = try? JSONDecoder().decode([FocusMode].self, from: data) {
+            return modes
+        }
+        return []
+    }
+
+    func saveCustomModes(_ modes: [FocusMode]) {
+        if let data = try? JSONEncoder().encode(modes) {
+            UserDefaults.standard.set(data, forKey: customModesKey)
+        }
     }
 }
