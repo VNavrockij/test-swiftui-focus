@@ -34,11 +34,13 @@ The app follows MVVM (Model-View-ViewModel) architecture with clean separation o
 
 ## Screenshots
 
-![Main](docs/main.png)
-![Focus Modes](docs/modes.png)
-![Session Detail](docs/detail.png)
-![History](docs/history.png)
-![Settings](docs/settings.png)
+<p>
+  <img src="docs/main.png" width="240" alt="Main">
+  <img src="docs/modes.png" width="240" alt="Focus Modes">
+  <img src="docs/detail.png" width="240" alt="Session Detail">
+  <img src="docs/history.png" width="240" alt="History">
+  <img src="docs/settings.png" width="240" alt="Settings">
+</p>
 
 ## Tech Stack
 
