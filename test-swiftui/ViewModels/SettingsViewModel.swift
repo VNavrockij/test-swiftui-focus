@@ -8,7 +8,6 @@ import Combine
 
 class SettingsViewModel: ObservableObject {
     @Published var settings: UserSettings
-    @Published var showResetOnboardingAlert = false
     
     private let persistence = PersistenceService()
     

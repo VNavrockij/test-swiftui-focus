@@ -7,7 +7,6 @@ import Foundation
 import Combine
 
 class FocusModesViewModel: ObservableObject {
-    @Published var focusModes: [FocusMode] = []
     @Published var customModes: [FocusMode] = []
 
     private let persistence = PersistenceService()
@@ -30,22 +29,15 @@ class FocusModesViewModel: ObservableObject {
         )
         customModes.append(mode)
         saveCustomModes()
-        rebuildList()
     }
 
     func deleteCustomMode(_ mode: FocusMode) {
         customModes.removeAll { $0.id == mode.id }
         saveCustomModes()
-        rebuildList()
     }
 
     private func loadModes() {
         customModes = persistence.loadCustomModes()
-        rebuildList()
-    }
-
-    private func rebuildList() {
-        focusModes = FocusMode.sampleModes + customModes
     }
 
     private func saveCustomModes() {
